@@ -1,0 +1,21 @@
+Studenti - per loggarsi come studenti:
+ID: 000X con 00<=x<16
+Psw: X
+
+Docenti
+ID: massimo.cicognani
+Psw: 0
+
+ID:michele.mulazzani
+Psw: 1
+
+Admin
+ID: admin.monti
+Psw: 0
+
+Nota:
+Le statistiche per l'andamento degli esami sono più interessanti da visualizzare per quei docenti che hanno + appelli della stessa materia già registrati, come il prof. Mulazzani
+
+La stessa cosa vale per le statistiche dello studente, tra i quali quello con più esami all'attivo è quello con matricola 00000.
+
+per come è strutturato il programma non è possibile registrare esami con data di inizio precedente a quella di oggi e di conseguenza non è possibile modificare i voti di un esame appena registrato tramite l'interfaccia, a meno di non aspettare almeno 24 ore. Se si vuole incrementare il numero degli appelli e degli studenti sarà necessario agire direttamente sui file di salvataggio nella cartella "Save" di facilmente intuibile struttura, anche se manipolazioni effettuate senza la dovuta cautela possono compromettere l'integrità dei dati già presenti se si avvia il programma. 
