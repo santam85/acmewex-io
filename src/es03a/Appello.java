@@ -24,7 +24,7 @@ public class Appello implements java.io.Serializable {
 	 * 
 	 * @param nome nome dell'appello
 	 * @param tipo tipologia dell'appello: orale,pratico,scritto
-	 * @param luogo luogo in cui si terr� l'appello
+	 * @param luogo luogo in cui si terrà l'appello
 	 * @param inizio data dell'inizio dell'esame
 	 * @param chiusura data di chiusura delle iscrizioni
 	 * @param maxStudenti numero massimo di iscritti acettati
@@ -47,7 +47,7 @@ public class Appello implements java.io.Serializable {
 	/**Controlla la presenza di uno studente tra gli iscritti all'appello
 	 * 
 	 * @param id identificatore dello studente da cercare
-	 * @return true se lo studente � presente tra gli iscritti, false altrimenti
+	 * @return true se lo studente è presente tra gli iscritti, false altrimenti
 	 * */
 	public boolean isIscritto(String id){
 		//si utilizza il metodo containsKey delle HashMap
@@ -83,14 +83,14 @@ public class Appello implements java.io.Serializable {
 	}
 	/**Setta il luogo dell'appello
 	 * 
-	 * @param luogo nuovo luogo dove si terr� l'appello
+	 * @param luogo nuovo luogo dove si terrà l'appello
 	 * */
 	public void setLuogo(String luogo){
 		this.luogo=luogo;
 	}
 	/**Recupera il luogo dell'appello
 	 * 
-	 * @return una stringa contente il luogo attuale dove si terr� l'appello
+	 * @return una stringa contente il luogo attuale dove si terrà l'appello
 	 * */
 	public String getLuogo(){
 		return luogo;
@@ -140,7 +140,7 @@ public class Appello implements java.io.Serializable {
 	/**Iscrive uno studente all'appello
 	 * 
 	 * @param id identificatore dello studente nel database utenti
-	 * @exception MaxIscrittiException eccezione generata se si � raggiunto il numero massimo di iscritti
+	 * @exception MaxIscrittiException eccezione generata se si è raggiunto il numero massimo di iscritti
 	 * @exception ExpiredDateException eccezione generata nel caso l'iscrizione venga eseguita a data chiusura iscrizioni superata
 	 * @return true in caso di iscrizione riuscita, false altrimenti
 	 * */
@@ -239,7 +239,7 @@ public class Appello implements java.io.Serializable {
 	 * 
 	 * @param data1 prima data del periodo da controllare (antecedente alla seconda)
 	 * @param data2 seconda data del periodo da controllare (successiva alla prima)
-	 * @return true in caso la data sia tra quelle specificate o al pi� pari a data2, false altrimenti (anche in caso inizio=data1)
+	 * @return true in caso la data sia tra quelle specificate o al più pari a data2, false altrimenti (anche in caso inizio=data1)
 	 * */
 	public boolean isBetween(ACMEDate data1,ACMEDate data2){
 		return data1.before(this.inizio)&& data2.after(this.inizio);
@@ -251,7 +251,7 @@ public class Appello implements java.io.Serializable {
 	public boolean isEnded(){
 		return new ACMEDate().after(this.inizio);
 	}
-	/**D� una rappresentazione testuale dell'appello
+	/**Dà una rappresentazione testuale dell'appello
 	 * 
 	 * @return stringa contenente i dati principali dell'appello
 	 * */

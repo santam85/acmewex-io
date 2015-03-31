@@ -1,7 +1,7 @@
 package es03a;
 import java.util.Arrays;
 
-/**Classe contenente metodi statici di utilit‡ varia
+/**Classe contenente metodi statici di utilit√† varia
  * 
  * @author Giovanni Alai, Matteo Desanti, Marco Santarelli
  * @version 1.0

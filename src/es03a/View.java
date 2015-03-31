@@ -11,7 +11,7 @@ import javax.swing.*;
 public class View {
 	//campo che mantiene il riferimanto al listener registrato per questa classe
 	static private Listener listener;
-	/**campo utilizzato per le statistiche degli appelli. La prima HashMap contiene come chiavi nome e tipo dell'esame ed � associata 
+	/**campo utilizzato per le statistiche degli appelli. La prima HashMap contiene come chiavi nome e tipo dell'esame ed è associata
 	 * alla seconda che contiene le date degli appelli con relativa media*/
 	static public HashMap<String,HashMap<String,Float>> appelliScelti;
 	/**stringa per memorizzare il nome dell'esame nelle statistiche del docente*/
@@ -550,7 +550,7 @@ public class View {
 	static public void paintEditSession(){
 		//refresh della finestra
 		refresh();
-		//stampa del menu di creazione appello (poich� si assomigliano molto si risfruttano i componenti)
+		//stampa del menu di creazione appello (poiché si assomigliano molto si risfruttano i componenti)
 		paintOpenSession();
 		//inizializzazione della location
 		location="paintEditSession";

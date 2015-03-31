@@ -16,7 +16,7 @@ public class UsersDb implements java.io.Serializable{
 	public UsersDb(){
 		database=new HashMap<String,IUser>();
 	}
-	/**Controlla la presenza nel database di un specifico id (e perciò di un utente)
+	/**Controlla la presenza nel database di un specifico id (e perciÃ² di un utente)
 	 * 
 	 * @param id identificatore da cercare
 	 * @return true nel caso sia presente, false altrimenti
@@ -28,7 +28,7 @@ public class UsersDb implements java.io.Serializable{
 	/**Inserisce un IUser nel database
 	 * 
 	 * @param user utente da inserire
-	 * @return true se l'inserimento è effettuato, false se l'utente è già presente nel database
+	 * @return true se l'inserimento Ã¨ effettuato, false se l'utente Ã¨ giÃ  presente nel database
 	 * */
 	public boolean insert(IUser user){
 		if(!database.containsKey(user.getId())){
@@ -40,7 +40,7 @@ public class UsersDb implements java.io.Serializable{
 	/**Rimuove dal datadase l'utente che corrisponde all'id fornitogli
 	 * 
 	 * @param id identificatore dell'utente da rimuovere
-	 * @return true se la rimozione è effettuata, false se l'utente non è presente (e perciò non può essere rimosso)
+	 * @return true se la rimozione Ã¨ effettuata, false se l'utente non Ã¨ presente (e perciÃ² non puÃ² essere rimosso)
 	 * */
 	public boolean remove(String id){
 		if(!database.containsKey(id)){

@@ -27,7 +27,7 @@ public class User implements IUser,java.io.Serializable{
 		//assegnamento dell'id
 		reAssignId();
 	}
-	/**Assegna l'id in base al tipo di utente (il metodo � override dalle classi Studente, Docente e Admin)*/
+	/**Assegna l'id in base al tipo di utente (il metodo è override dalle classi Studente, Docente e Admin)*/
 	public void reAssignId(){
 		id="guest.user";
 	}
@@ -73,7 +73,7 @@ public class User implements IUser,java.io.Serializable{
 	/**Controlla che la password fornita sia uguale a quella dell'utente
 	 * 
 	 * @param psw password da controllare
-	 * @return true se la password fornita � uguale a quella dell'utente, diversamente false
+	 * @return true se la password fornita è uguale a quella dell'utente, diversamente false
 	 * */
 	public boolean parsePsw(String psw){
 		return this.psw.equals(psw);
@@ -95,12 +95,12 @@ public class User implements IUser,java.io.Serializable{
 	}
 	/**Fornisce una rappresentazione testuale dell'utente (override del toString della classe Object)
 	 * 
-	 * @return stringa contenente i dati dell'utente separati da �
+	 * @return stringa contenente i dati dell'utente separati da -
 	 * */
 	public String toString(){
-		return id+"�"+psw+"�"+nome+"�"+cognome;
+		return id+"-"+psw+"-"+nome+"-"+cognome;
 	}
-	/**Recupera il tipo di utente (il metodo � override dalle classi Studente, Docente, Admin)
+	/**Recupera il tipo di utente (il metodo è override dalle classi Studente, Docente, Admin)
 	 * 
 	 * @return valore primitivo intero che rappresenta la tipologia dell'utente
 	 * */

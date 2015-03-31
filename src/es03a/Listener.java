@@ -20,8 +20,8 @@ public class Listener implements WindowListener,ActionListener,ChangeListener,Li
 	 * */
 	public void actionPerformed(ActionEvent ev){
 		/*Ad ognuno dei seguenti if corrisponde un possibile evnto generato da un oggetto del View
-		Il riconoscimento dell'oggetto � fatto tramite comando getSource che restituisce il riferimento dell'oggeto in questione.
-		Nel caso di componenti (bottoni in particolare) utilizzati in pi� punti si controlla anche la schermata a cui appartiene 
+		Il riconoscimento dell'oggetto è fatto tramite comando getSource che restituisce il riferimento dell'oggeto in questione.
+		Nel caso di componenti (bottoni in particolare) utilizzati in più punti si controlla anche la schermata a cui appartiene
 		il componente tramite la stringa location.*/
 		//sorgente dell'evento bottone registrazione
 		if(ev.getSource()==View.registrazione){
@@ -139,7 +139,7 @@ public class Listener implements WindowListener,ActionListener,ChangeListener,Li
 						View.console.setForeground(Color.red);
 						View.console.setText("Registrazione fallita.");
 					}
-					//disabilitazione del tasto registra per impedire pi� pressioni
+					//disabilitazione del tasto registra per impedire più pressioni
 					View.registra.setEnabled(false);
 				}else{
 					//messaggio di errore per mancanza di dati
@@ -230,13 +230,13 @@ public class Listener implements WindowListener,ActionListener,ChangeListener,Li
 			if (View.appelli.getSelectedIndex()!=-1||View.appelli.getItemCount()!=0){
 				//scrittura nella Label del nome del docente dell'appello
 				View.nomeDocente.setText("Docente: "+Controller.getUserName(Controller.getAppello(View.appelli.getSelectedIndex()).getDocente()));
-				//alla selezione di un elemento si risale all'appello scelto in base alla posizione dentro l'array includedSessions e su questo si invoca isIscritto per controllare se � gi� presente tra gli iscritti
+				//alla selezione di un elemento si risale all'appello scelto in base alla posizione dentro l'array includedSessions e su questo si invoca isIscritto per controllare se è già presente tra gli iscritti
 				if(!(View.appelli.getSelectedIndex()==-1) && View.includedSessions[View.appelli.getSelectedIndex()].isIscritto(Controller.userLogged.getId())){
-					//se lo studente � gi� iscritto si disabilita il tasto iscriviti e si abilita rimuoviti
+					//se lo studente è già iscritto si disabilita il tasto iscriviti e si abilita rimuoviti
 					View.iscriviti.setEnabled(false);
 					View.rimuoviti.setEnabled(true);
 				}else{
-					//se lo studente non � iscritto si disabilita il tasto rimuoviti e si abilita iscriviti
+					//se lo studente non è iscritto si disabilita il tasto rimuoviti e si abilita iscriviti
 					View.iscriviti.setEnabled(true);
 					View.rimuoviti.setEnabled(false);
 				}
@@ -255,7 +255,7 @@ public class Listener implements WindowListener,ActionListener,ChangeListener,Li
 			//recupero dei valori di mese e giorno
 			//all'indice recuperato del mese si somma 1 per ottenere il numero giusto (tra 1 e 12 altrimenti sarebbe tra 0 e 11)
 			int inizioM=View.inizioMm.getSelectedIndex()+1;
-			//per il giorno non c'� la necessita di risalire alla data esatta
+			//per il giorno non c'è la necessita di risalire alla data esatta
 			int inizioG=View.inizioGg.getSelectedIndex();
 			//rimozione dei giorni superiori a 28
 			for(int i=View.inizioGg.getItemCount();i>28;i--){
@@ -265,23 +265,23 @@ public class Listener implements WindowListener,ActionListener,ChangeListener,Li
 			if(inizioM==2){
 				//controllo anno bisestile
 				if (inizioA%4==0){
-					//inserimento 29� giorno
+					//inserimento 29mo giorno
 					View.inizioGg.addItem("29");
 				}
 			//selezione mesi da 30 giorni (aprile, giugno, settembre e novembre)	
 			}else if ( inizioM==4 || inizioM==6 || inizioM==9 || inizioM==11){
-				//inserimento 29� e 30� giorno
+				//inserimento 29mo e 30mo giorno
 				for (int i=29; i<31; i++){
 					View.inizioGg.addItem(""+i);
 				}
 			//selezione mesi da 31 giorni (i restanti)
 			}else {
-				//inserimento 29�, 30� e 31� giorno
+				//inserimento 29mo, 30mo e 31mo giorno
 				for (int i=29; i<32; i++){
 					View.inizioGg.addItem(""+i);
 				}
 			}
-			//selezione del giorno, nel caso passando da una data all'altra il giorno non fosse pi� selezionabile si reimposta a 1
+			//selezione del giorno, nel caso passando da una data all'altra il giorno non fosse più selezionabile si reimposta a 1
 			//esempio selezionando 2005,gennaio,31 e poi scegliendo il mese febbraio il campo giorno torna a 1 (non esistendo il 31 giorno in febbraio
 			View.inizioGg.setSelectedIndex((inizioG>View.inizioGg.getItemCount()-1)?0:inizioG);
 			//si ripete lo stesso procedimento di cui sopra per la seconda data
@@ -314,13 +314,13 @@ public class Listener implements WindowListener,ActionListener,ChangeListener,Li
 			if (View.appelli.getSelectedIndex()!=-1||View.appelli.getItemCount()!=0){
 				//scrittura nella Label del nome del docente dell'appello
 				View.nomeDocente.setText("Docente: "+Controller.getUserName(Controller.getAppello(View.appelli.getSelectedIndex()).getDocente()));
-				//alla selezione di un elemento si risale all'appello scelto in base alla posizione dentro l'array includedSessions e su questo si invoca isIscritto per controllare se � gi� presente tra gli iscritti
+				//alla selezione di un elemento si risale all'appello scelto in base alla posizione dentro l'array includedSessions e su questo si invoca isIscritto per controllare se è già presente tra gli iscritti
 				if(!(View.appelli.getSelectedIndex()==-1) && View.includedSessions[View.appelli.getSelectedIndex()].isIscritto(Controller.userLogged.getId())){
-					//se lo studente � gi� iscritto si disabilita il tasto iscriviti e si abilita rimuoviti
+					//se lo studente è già iscritto si disabilita il tasto iscriviti e si abilita rimuoviti
 					View.iscriviti.setEnabled(false);
 					View.rimuoviti.setEnabled(true);
 				}else{
-					//se lo studente non � iscritto si disabilita il tasto rimuoviti e si abilita iscriviti
+					//se lo studente non è iscritto si disabilita il tasto rimuoviti e si abilita iscriviti
 					View.iscriviti.setEnabled(true);
 					View.rimuoviti.setEnabled(false);
 				}
@@ -364,17 +364,17 @@ public class Listener implements WindowListener,ActionListener,ChangeListener,Li
 				View.fineAaaa.setEnabled(false);
 				View.fineMm.setEnabled(false);
 				View.fineGg.setEnabled(false);
-				//creazione della data di fine ricerca (si � scelto come data lontana il 1 gennaio tra 5 anni)
+				//creazione della data di fine ricerca (si è scelto come data lontana il 1 gennaio tra 5 anni)
 				fine=new ACMEDate(new ACMEDate().year+5+",1,1");
 			}
-			//rimozione degli appelli dalla lista per preparasi al reinserimento (solo se non � gi� vuota)
+			//rimozione degli appelli dalla lista per preparasi al reinserimento (solo se non è già vuota)
 			if(!(View.appelli.getComponentCount()<1)){
 				View.appelli.removeAllItems();
 			}
 			//recupero di tutti gli appelli
 			Appello[] tmp=Controller.getAppelli();
 			int j=0;
-			//creazione dell'array atto a contenere gli appelli ricercati tra le due date (grande al pi� quanto tutti gli appelli esistenti)
+			//creazione dell'array atto a contenere gli appelli ricercati tra le due date (grande al più quanto tutti gli appelli esistenti)
 			View.includedSessions=new Appello[tmp.length];
 			//scorrimento dell'elenco degli appelli
 			for(int i=0;i<tmp.length;i++){
@@ -611,9 +611,9 @@ public class Listener implements WindowListener,ActionListener,ChangeListener,Li
 						View.console.setText("Controllare i dati e riprovare.");
 					}
 				} else {
-					//messaggio di impossibilit� di modificare l'appello
+					//messaggio di impossibilità di modificare l'appello
 					View.console.setForeground(Color.red);
-					View.console.setText("Non � possibile modificare appelli di altri docenti.");	
+					View.console.setText("non è possibile modificare appelli di altri docenti.");
 				}
 			}else{
 				View.console.setForeground(Color.red);
@@ -641,7 +641,7 @@ public class Listener implements WindowListener,ActionListener,ChangeListener,Li
 				View.fineGg.setSelectedIndex(View.modifyingSession.getChiusura().date-1);
 				View.nomeDocente.setText("Docente: "+Controller.getUserName(View.modifyingSession.getDocente()));
 			}else {
-				//altrimenti i campi si lasciano vuoti cos� come anche il nome docente
+				//altrimenti i campi si lasciano vuoti cosi come anche il nome docente
 				View.nomeDocente.setText("");
 			}
 		}
@@ -658,9 +658,9 @@ public class Listener implements WindowListener,ActionListener,ChangeListener,Li
 					View.console.setForeground(Color.blue);
 					View.console.setText("Appello Rimosso");
 				}else{
-					//messaggio di impossibilit� di cancellare l'appello
+					//messaggio di impossibilità di cancellare l'appello
 					View.console.setForeground(Color.red);
-					View.console.setText("Non � possibile cancellare appelli di altri docenti.");	
+					View.console.setText("non è possibile cancellare appelli di altri docenti.");
 				}
 			}else{
 				View.console.setForeground(Color.red);
@@ -730,7 +730,7 @@ public class Listener implements WindowListener,ActionListener,ChangeListener,Li
 			//controllo della conclusione dell'appello (data superata)
 			if (!Controller.getAppello(pos).isEnded()){
 				//messaggio di errore in console
-				View.console.setText("Non  � possibile inserire voti a esami non ancora sostenuti.");
+				View.console.setText("Non  è possibile inserire voti a esami non ancora sostenuti.");
 			} else {
 				//recupero degli iscritti (posizioni) selezionati dalla lista
 				int[] sel=View.iscritti.getSelectedIndices();
@@ -752,12 +752,12 @@ public class Listener implements WindowListener,ActionListener,ChangeListener,Li
 		if (ev.getSource()==View.statisticheAppello){
 			//visualizzazione statistiche di un esame
 			View.paintStatisticheAppello();
-			//gli appelli sono divisi nella HashMap per nome+tipo, ad ognuno � abbinata una seconda HashMap con identificatore la data dell'esame e oggetto la media dei voti
+			//gli appelli sono divisi nella HashMap per nome+tipo, ad ognuno è abbinata una seconda HashMap con identificatore la data dell'esame e oggetto la media dei voti
 			View.appelliScelti=new HashMap<String,HashMap<String,Float>>();
 			for(int i=0;i<Controller.getNumAppelli();i++){
 				//controllo che l'esame sia del docente loggato
 				if(Controller.getAppello(i).getDocente().equals(Controller.userLogged.getId())){
-					//controllo che appelliscelti non contenga gi� il nome e il tipo di appello
+					//controllo che appelliscelti non contenga già il nome e il tipo di appello
 					if(!View.appelliScelti.containsKey(Controller.getAppello(i).getNome()+" "+Controller.getAppello(i).getTipo())){
 						//inserimento in appelliScelti di nome+tipo
 						View.appelliScelti.put(Controller.getAppello(i).getNome()+" "+Controller.getAppello(i).getTipo(),new HashMap<String,Float>());
@@ -826,16 +826,16 @@ public class Listener implements WindowListener,ActionListener,ChangeListener,Li
 			View.inserisci.setEnabled(true);
 		}
 	}
-	/**Metodo per l'ascolto di WindowEvent di tipo windowClosed. � implementato con corpo vuoto perch� non utilizzato*/
+	/**Metodo per l'ascolto di WindowEvent di tipo windowClosed. è implementato con corpo vuoto perché non utilizzato*/
 	public void windowClosed(WindowEvent e){}
-	/**Metodo per l'ascolto di WindowEvent di tipo windowOpened. � implementato con corpo vuoto perch� non utilizzato*/
+	/**Metodo per l'ascolto di WindowEvent di tipo windowOpened. è implementato con corpo vuoto perché non utilizzato*/
 	public void windowOpened(WindowEvent e){}
-	/**Metodo per l'ascolto di WindowEvent di tipo windowIconified. � implementato con corpo vuoto perch� non utilizzato*/
+	/**Metodo per l'ascolto di WindowEvent di tipo windowIconified. è implementato con corpo vuoto perché non utilizzato*/
 	public void windowIconified(WindowEvent e){}
-	/**Metodo per l'ascolto di WindowEvent di tipo windowDeiconified. � implementato con corpo vuoto perch� non utilizzato*/
+	/**Metodo per l'ascolto di WindowEvent di tipo windowDeiconified. è implementato con corpo vuoto perché non utilizzato*/
 	public void windowDeiconified(WindowEvent e){}
-	/**Metodo per l'ascolto di WindowEvent di tipo windowActivated. � implementato con corpo vuoto perch� non utilizzato*/
+	/**Metodo per l'ascolto di WindowEvent di tipo windowActivated. è implementato con corpo vuoto perché non utilizzato*/
 	public void windowActivated(WindowEvent e){}
-	/**Metodo per l'ascolto di WindowEvent di tipo windowDeactivated. � implementato con corpo vuoto perch� non utilizzato*/
+	/**Metodo per l'ascolto di WindowEvent di tipo windowDeactivated. è implementato con corpo vuoto perché non utilizzato*/
 	public void windowDeactivated(WindowEvent e){}	
 }

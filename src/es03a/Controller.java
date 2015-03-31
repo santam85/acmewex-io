@@ -5,7 +5,7 @@ import java.io.*;
 
 
 /**
- * Main class che contiene le funzionalit‡ principali dell'applicazione
+ * Main class che contiene le funzionalit√† principali dell'applicazione
  * 
  * @author Giovanni Alai, Matteo Desanti, Marco Santarelli
  * @version 1.0
@@ -225,7 +225,7 @@ public class Controller {
 	 * 
 	 * @param nome nome dell'appello
 	 * @param tipo tipologia di appello: orale,scritto,pratico
-	 * @param luogo luogo dove si svolger‡ l'appello
+	 * @param luogo luogo dove si svolger√† l'appello
 	 * @param inizio data di inizio dell'appello
 	 * @param chiusura data chiusura iscrizioni
 	 * @param maxIscritti numero massimo degli studenti ammessi
@@ -233,8 +233,8 @@ public class Controller {
 	 * */
 	public static boolean openSession(String nome, String tipo, String luogo,ACMEDate inizio, ACMEDate chiusura, int maxIscritti) {
 		/*blocco if che controlla i valori critici dei campi e viene superato solo se:
-		 * 1) il numero massimo degli iscritti Ë diverso da 0
-		 * 2) la data di inizio Ë successiva al giorno di chiusura e al giorno attuale
+		 * 1) il numero massimo degli iscritti √® diverso da 0
+		 * 2) la data di inizio √® successiva al giorno di chiusura e al giorno attuale
 		 * 3) la data di chiusura iscrizioni deve essere successiva al giorno attuale
 		 * 4) i campi nome e luogo non siano vuoti
 		 * altrimenti il metodo ritorna false
@@ -268,7 +268,7 @@ public class Controller {
 	 * 
 	 * @param newNome nuovo nome dell'appello
 	 * @param newTipo nuova tipologia dell'appello
-	 * @param newLuogo nuovo luogo dove si svolger‡ l'appello
+	 * @param newLuogo nuovo luogo dove si svolger√† l'appello
 	 * @param newInizio nuova data di inizio dell'appello
 	 * @param newChiusura nuova data chiusura iscrizioni
 	 * @param newMaxIscritti nuovo numero massimo degli studenti ammessi, non deve essere inferiore al numero degli attuali iscritti
@@ -303,10 +303,10 @@ public class Controller {
 			tmp.setLuogo(newLuogo);
 			tmp.setInizio(newInizio);
 			tmp.setChiusura(newChiusura);
-			//controllo che il numero massimo di iscritti sia maggiore al numero di studenti gi‡ iscritti all'appello
+			//controllo che il numero massimo di iscritti sia maggiore al numero di studenti gi√† iscritti all'appello
 			if (newMaxIscritti>tmp.getIscritti().length){
 				tmp.setMaxStudenti(newMaxIscritti);
-			//altrimenti il nuovo numero di iscritti Ë settato al valore degli iscritti gi‡ presenti
+			//altrimenti il nuovo numero di iscritti √® settato al valore degli iscritti gi√† presenti
 			}else{
 				tmp.setMaxStudenti(tmp.getIscritti().length);
 			}

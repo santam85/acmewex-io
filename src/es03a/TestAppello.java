@@ -65,7 +65,7 @@ public class TestAppello {
 		}
 		//assegnamento voto a Giovanni
 		System.out.println("Assegnamento voto a Giovanni");
-		//in ordine di matricola è il secondo perciò pos=1
+		//in ordine di matricola Ã¨ il secondo perciÃ² pos=1
 		geometria.setVoto(1,30);
 		//rimozione Marco dagli iscritti
 		System.out.println("Esito rimozione di Marco "+geometria.rimuovi("0000217387"));

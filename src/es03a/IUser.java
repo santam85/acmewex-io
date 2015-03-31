@@ -37,7 +37,7 @@ public interface IUser {
 	/**Controlla che la password fornita sia uguale a quella dell'utente
 	 * 
 	 * @param psw password da controllare
-	 * @return true se la password fornita è uguale a quella dell'utente, diversamente false
+	 * @return true se la password fornita Ã¨ uguale a quella dell'utente, diversamente false
 	 * */
 	public boolean parsePsw(String psw);
 	/**Setta la password dell'utente fornendo la vecchia (controllo di sicurezza) e la nuova

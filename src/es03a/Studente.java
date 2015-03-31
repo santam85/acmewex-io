@@ -7,7 +7,7 @@ package es03a;
  * */
 public class Studente extends User {
 	private static final long serialVersionUID = 4L;
-	//campo dove si mantiene la matricola (che per lo studente è anche l'id)
+	//campo dove si mantiene la matricola (che per lo studente Ã¨ anche l'id)
 	private String matricola;
 	/**Costruisce uno studente passandogli nome, cognome, password e matricola
 	 * 

@@ -53,7 +53,7 @@ public class ACMEDate implements java.io.Serializable {
 	/**Controlla che la data sia successiva a un altra data
 	 * 
 	 * @param date data rispetto cui fare il controllo
-	 * @return true se la data � successiva alla data del campo date, false altrimenti 
+	 * @return true se la data è successiva alla data del campo date, false altrimenti
 	 * */
 	public boolean after(ACMEDate date) {
 		//creazione di un calendario
@@ -66,7 +66,7 @@ public class ACMEDate implements java.io.Serializable {
 	/**Controlla che la data sia precedente a un altra data
 	 * 
 	 * @param date data rispetto cui fare il controllo
-	 * @return true se la data � precedente alla data del campo date, false altrimenti 
+	 * @return true se la data è precedente alla data del campo date, false altrimenti
 	 * */
 	public boolean before(ACMEDate date) {
 		//creazione di un calendario
